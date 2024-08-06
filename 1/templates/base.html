@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Web Scraping with Flask{% endblock %}</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { width: 80%; margin: auto; }
+        h1 { text-align: center; }
+        .videos, .products { margin-bottom: 40px; }
+        h2 { border-bottom: 1px solid #ccc; padding-bottom: 10px; }
+        ul { list-style: none; padding: 0; }
+        li { padding: 10px; border-bottom: 1px solid #ccc; }
+        a { text-decoration: none; color: #333; }
+        a:hover { color: #007BFF; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

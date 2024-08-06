@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendation System</title>
+</head>
+<body>
+    <h1>Content Recommendation System</h1>
+    <form method="POST">
+        <label>Select your preferences:</label><br>
+        <input type="checkbox" name="preferences" value="science"> Science<br>
+        <input type="checkbox" name="preferences" value="nature"> Nature<br>
+        <input type="checkbox" name="preferences" value="technology"> Technology<br>
+        <input type="submit" value="Get Recommendations">
+    </form>
+
+    {% if recommendations %}
+        <h2>Recommended Content:</h2>
+        <ul>
+            {% for item in recommendations %}
+                <li>{{ item.title }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>

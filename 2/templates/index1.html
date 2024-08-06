@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Data Display</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>API Data</h1>
+        <p>Count: {{ weather_data['count'] }}</p>
+
+        <!-- Display the API data in a table -->
+        <table>
+            <thead>
+                <tr>
+                    <th>City</th>
+                    <th>Temperature (°C)</th>
+                    <th>Weather Description</th>
+                    <!-- Add more headers as needed -->
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Loop through the API data and display rows -->
+                {% for item in weather_data['data'] %}
+                    <tr>
+                        <td>{{ item['city_name'] }}</td>
+                        <td>{{ item['temp'] }}</td>
+                        <td>{{ item['weather']['description'] }}</td>
+                        <!-- Add more cells as needed -->
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

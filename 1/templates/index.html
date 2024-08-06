@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h1>Web Scraping with Flask</h1>
+
+<div class="videos">
+    <h2>YouTube Videos</h2>
+    <ul>
+        {% for video in youtube_videos %}
+            <li><a href="{{ video.link }}" target="_blank">{{ video.title }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+
+<div class="products">
+    <h2>Amazon Products</h2>
+    <ul>
+        {% for product in amazon_products %}
+            <li>{{ product.title }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

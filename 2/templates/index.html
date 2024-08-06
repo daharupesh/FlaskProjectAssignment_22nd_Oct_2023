@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather APP</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Weather APP</h1>
+    <form action="/weatherapp" method ="POST">
+        <label for="lat">Latitude</label>
+        <input type="text" name="lat" id="lat">
+        
+        <label for="lon">Longitude</label>
+        <input type="text" name="lon" id="lon">
+        
+        <label for="api">APIKEY</label>
+        <input type="text" name="api" id="api">
+    
+        <label for="include">Include</label>
+        <input type="text" name="include" id="include">
+        
+        <input type="submit" value="Search">
+    </form>
+</body>
+</html>
